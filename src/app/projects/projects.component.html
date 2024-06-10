@@ -1,0 +1,47 @@
+<section id = "projects">
+  <div style="margin-bottom: -2px" class="d-flex flex-column py-5" >
+    <div class="container ">
+      <div class="row mt-5">
+        <div class="col-12">
+          <h5 class="text-center text-muted">Check out my</h5>
+          <h1 class=" text-center">Projects</h1>
+        </div>
+      </div>
+
+        <div class="row d-flex justify-content-center">
+          <div class="col-sm-12">
+
+            <div class="card mt-4 border-dark border-2" *ngFor="let project of projectArray">
+                <div class="row g-0">
+
+                  <div class="col-md-5 border-end">
+                    <img [src]="project.img.source" [alt]="project.img.alt" class="w-100 h-100 img-fluid" >
+                  </div>
+
+                  <div class="col-md-7 ">
+                    <div class="card-body d-flex align-items-start flex-column h-100">
+                      <h5 class="card-title ">{{project.name}}</h5>
+                      <p class="card-subtitle ">{{project.techStack}}</p>
+
+                      <p class="card-text mt-auto" [innerHTML]="project.description"></p>
+
+                      <div class="align-self-end mt-auto">
+                        <a [href]="project.liveLink" target="_blank" class="btn btn-outline-dark mx-2">Live Demo</a>
+                        <a *ngIf="project.githubLink.length > 0"
+                        [href]="project.githubLink" target="_blank" class="btn btn-outline-dark mx-2"><i class="ri-github-fill"></i> Github</a>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+      </div>
+
+
+<section>
