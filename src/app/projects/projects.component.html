@@ -11,7 +11,7 @@
         <div class="row d-flex justify-content-center">
           <div class="col-sm-12">
 
-            <div class="card mt-4 border-dark border-2" *ngFor="let project of projectArray">
+            <div class="card mt-4 border-dark border-2" *ngFor="let project of projectArray" data-aos="fade-up" data-aos-duration="2000">
                 <div class="row g-0">
 
                   <div class="col-md-5 border-end">
@@ -26,7 +26,11 @@
                       <p class="card-text mt-auto" [innerHTML]="project.description"></p>
 
                       <div class="align-self-end mt-auto">
-                        <a [href]="project.liveLink" target="_blank" class="btn btn-outline-dark mx-2">Live Demo</a>
+                        <a
+                        *ngIf="project.liveLink.length > 0"
+                        [href]="project.liveLink" target="_blank"
+                        class="btn btn-outline-dark mx-2">
+                        Live Demo</a>
                         <a *ngIf="project.githubLink.length > 0"
                         [href]="project.githubLink" target="_blank" class="btn btn-outline-dark mx-2"><i class="ri-github-fill"></i> Github</a>
                       </div>

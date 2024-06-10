@@ -13,7 +13,7 @@
   linear-gradient(280deg, #222831, transparent)
 }
 
-.custom-shape-divider-bottom-1717736865 {
+.wave {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -21,20 +21,17 @@
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
-  margin-bottom: -2px;
 }
 
-.custom-shape-divider-bottom-1717736865 svg {
+.wave svg {
   position: relative;
   display: block;
-  width: 100%;
-  height: 138px;
-
+  width: calc(100% + 1.3px);
+  height: 70px;
 }
 
-.custom-shape-divider-bottom-1717736865 .shape-fill {
-  fill: white;
-  border-width: 0;
+.wave .shape-fill {
+  fill: #FFFFFF;
 }
 
 .nav-link {
@@ -46,11 +43,21 @@
   height: 300px;
   margin: 0 auto 2rem;
 }
+
+.myname{
+  color: #FAED26;
+  font-size: 4rem;
+}
 @media screen and (max-width: 1200px){
   .bear-icon {
     width: 275px;
     height: 275px;
     margin: 0 auto 2rem;
+  }
+
+  .myname{
+    color: #FAED26;
+    font-size: 3.5rem;
   }
 }
 
@@ -59,5 +66,10 @@
     width: auto;
     height: 50vw;
     margin: 0 auto 2rem;
+  }
+
+  .myname{
+    color: #FAED26;
+    font-size: 2.5rem;
   }
 }

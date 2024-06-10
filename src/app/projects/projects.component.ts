@@ -1,19 +1,19 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
 
   projectArray: any = [
     {
       name: "Personal Portfolio - Personal",
       techStack: "Angular, Bootstrap, AWS S3",
       description: "This is the project you are seeing right now. It was made as a way of self-introduction and as a showcase for future projects",
-      liveLink: "https://www.facebook.com",
-      githubLink: "",
+      liveLink: "",
+      githubLink: "https://github.com/toh-weiyan/website-portfolio",
       img: {
         source: "../../assets/portfolio-screenshot.png",
         alt: "Screenshot of porfolio site displaying name"
@@ -42,4 +42,9 @@ export class ProjectsComponent {
       }
     },
   ]
+
+  ngOnInit(): void {
+      AOS.init();
+  }
+
 }
